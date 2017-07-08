@@ -33,7 +33,7 @@ function smallNums(){
 3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
 function addNums(){
-    numbers.push (12)// Your answer here:
+    numbers.push (12,99,101)// Your answer here:
     return numbers
 }
 
@@ -57,21 +57,24 @@ let film = {
 4. Add a property "boxoffice" with a value of 269061 to the "film" object. Return "film".
 */
 function addBoxOffice(){
-    // Your answer here:
+   film.boxoffice = 269061
+   return film // Your answer here:
 }
 
 /*
 5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
 */
 function addActor(){
-    // Your answer here:
+   film.actors.push ("Yukiko Shimazaki") 
+   return film// Your answer here:
 }
 
 /*
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses(){
-    // Your answer here:
+   let loss = film.boxoffice - film.budget 
+   return loss  // Your answer here:
 }
 
 
@@ -87,10 +90,14 @@ Your function should return [ "v5", "x67", "r34", "f456", "p78" ];
 
 let numberVals = [ 5, 67, 34, 456, 78 ];
 let letterVals = [ "v", "x", "r", "f", "p" ];
-
 function interleave(){
     let vals = [];
-    // Your answer here:
+
+    for (let i = 0; i < numberVals.length; i ++) {
+        vals.push(letterVals[i] + numberVals[i])
+    }
+
+    return vals // Your answer here:
 }
 
 
